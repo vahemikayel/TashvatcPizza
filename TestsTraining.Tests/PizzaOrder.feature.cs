@@ -72,13 +72,13 @@ namespace SpecFlow.GeneratedTests
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Set Pizzas pricies")]
+        [Xunit.FactAttribute(DisplayName="All arguments passed currently")]
         [Xunit.TraitAttribute("FeatureTitle", "PizzaOrder")]
-        [Xunit.TraitAttribute("Description", "Set Pizzas pricies")]
+        [Xunit.TraitAttribute("Description", "All arguments passed currently")]
         [Xunit.TraitAttribute("Category", "mytag")]
-        public virtual void SetPizzasPricies()
+        public virtual void AllArgumentsPassedCurrently()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Set Pizzas pricies", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("All arguments passed currently", new string[] {
                         "mytag"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
@@ -93,7 +93,7 @@ this.ScenarioSetup(scenarioInfo);
                         "p2"});
             table1.AddRow(new string[] {
                         "0",
-                        "2",
+                        "3",
                         "0"});
             table1.AddRow(new string[] {
                         "1",
@@ -104,7 +104,7 @@ this.ScenarioSetup(scenarioInfo);
                         "0",
                         "1"});
 #line 10
- testRunner.Given("I have entered tuple into SetEemployyeePizzaPairs", ((string)(null)), table1, "Given ");
+ testRunner.Given("I have entered tuple into SetEmployyeePizzaPairs", ((string)(null)), table1, "Given ");
 #line 15
  testRunner.Given("GetTotalPizzaCount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
@@ -112,7 +112,40 @@ this.ScenarioSetup(scenarioInfo);
 #line 17
  testRunner.And("I have entered 1000 , 1500 , 1800 into the GetAvergePriceFunc", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
- testRunner.Then("the result should be 252 on the GetAvergePriceFunc", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be 4300 / 3 on the GetAvergePriceFunc", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Missing pizzass")]
+        [Xunit.TraitAttribute("FeatureTitle", "PizzaOrder")]
+        [Xunit.TraitAttribute("Description", "Missing pizzass")]
+        public virtual void MissingPizzass()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Missing pizzass", ((string[])(null)));
+#line 21
+this.ScenarioSetup(scenarioInfo);
+#line 23
+ testRunner.Given("I have entered 3 into SetEmployyessCount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "empl",
+                        "p1",
+                        "p2"});
+            table2.AddRow(new string[] {
+                        "0",
+                        "3",
+                        "0"});
+            table2.AddRow(new string[] {
+                        "1",
+                        "1",
+                        "1"});
+            table2.AddRow(new string[] {
+                        "2",
+                        "0",
+                        "1"});
+#line 24
+ testRunner.Given("I have entered tuple into SetEmployyeePizzaPairs", ((string)(null)), table2, "Given ");
 #line hidden
             this.ScenarioCleanup();
         }

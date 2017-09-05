@@ -36,7 +36,7 @@ namespace TestsTraining
 
 
             PizzaOrder order = new PizzaOrder();
-            order.SetPizasPricies(PizzaTypes);
+            order.SetPizzasPricies(PizzaTypes);
             order.GenerateOrder(EmployeesCount);
 
 
@@ -54,7 +54,7 @@ namespace TestsTraining
             }
             Console.WriteLine("*********************");
 
-            double Averge = order.GetAvergePrice(TotalByPizza, EmployeesCount);
+            double Averge = order.GetAvergePrice(TotalByPizza);
             Console.WriteLine("Averge Sum is " + Averge);
 
             Console.ReadLine();

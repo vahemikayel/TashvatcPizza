@@ -17,6 +17,7 @@ namespace TestsTraining
         {
            
         }
+
         public void GenerateOrder(int EmployeesCount)
         {
             _employyeePizzaPairs = new List<Tuple<int, int, int>>();
@@ -37,10 +38,16 @@ namespace TestsTraining
         public void SetEemployyeePizzaPairs(List<Tuple<int, int, int>> tuples)
         { _employyeePizzaPairs = tuples; }
 
-        public void SetPizasPricies(List<int> pizzaTypes)
-        { _pizzaTypes = pizzaTypes; }
+        public void SetPizzasPricies(List<int> pizzaTypes)
+        {
+            _pizzaTypes = pizzaTypes;
+            if (_pizzaTypes == null)
+                throw new PizzasException("Pizzas can't be null or empty:");
+        }
+
         public void SetEmployeesCount(int count)
         { _employeesCount = count; }
+
         public List<int> GetTotalPizzaCount()
         {
             int[] result = new int[_pizzaTypes.Count()];
@@ -58,8 +65,8 @@ namespace TestsTraining
                         result[i]+=1;
                     }
                 }
-
             }
+
             List<int> verjnakan = new List<int>();
             for(int i=0;i<result.Count();i++)
             {
@@ -115,11 +122,10 @@ namespace TestsTraining
 
         //    return Result;
         //}
-        public int GetAvergePrice(List<int> WholePizzaPrices,int EmployeesCount)
+        public int GetAvergePrice(List<int> WholePizzaPrices)
         {
-            return WholePizzaPrices.Sum() / EmployeesCount;
+            return WholePizzaPrices.Sum() / _employeesCount;
         }
-       
        
         public List<int> GetListofPriceFromOrder(List<int> list)
         {
@@ -173,5 +179,17 @@ namespace TestsTraining
 
         //    return Result;
         //}
+    }
+
+    public class PizzasException : Exception
+    {
+        string _message;
+
+        public override string Message => _message + " " + base.Message;
+        
+        public PizzasException(string messsage) 
+        {
+            _message = messsage;
+        }
     }
 }
